@@ -69,7 +69,7 @@ export default class MyTask extends React.Component {
         <View style={{ flex: 1, backgroundColor: "#F2EBE0" }}>
           <View
             style={{
-              backgroundColor: "#E30149",
+              backgroundColor: "#861657",
               flexDirection: "row",
             }}
           >
@@ -84,7 +84,7 @@ export default class MyTask extends React.Component {
           </View>
 
           <ScrollView>
-            {this.state.data.map((x) => {
+            {this.state.data.map((x, index) => {
               var color = "";
               if (x.priority <= 3) {
                 color = "green";
@@ -108,6 +108,7 @@ export default class MyTask extends React.Component {
 
               return (
                 <View
+                key ={index}
                   style={{
                     width: "100%",
                     borderWidth: 1,
@@ -123,7 +124,7 @@ export default class MyTask extends React.Component {
                   }}
                 >
                   <FontAwesome name="list-alt" size={24} color="black" />
-                  <View style={{ width: "70%", marginLeft: 20 }}>
+                  <View style={{ width: "65%", marginLeft: 20 }}>
                     <Text style={{ color: "gray", fontSize: 18 }}>
                       {x.title}
                     </Text>

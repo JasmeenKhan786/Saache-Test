@@ -12,7 +12,7 @@ import {
   ScrollView,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-
+ 
 export default class AboutUs extends React.Component {
   constructor(props) {
     super(props);
@@ -23,10 +23,10 @@ export default class AboutUs extends React.Component {
   }
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor: "#F2EBE0" }}>
+      <View style={{ flex: 1, backgroundColor: "#eec0c6" }}>
         <View
           style={{
-            backgroundColor: "#E30149",
+            backgroundColor: "#861657",
             flexDirection: "row",
           }}
         >

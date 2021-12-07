@@ -79,20 +79,12 @@ export default class Assign extends React.Component {
   };
 
   render() {
-    if (this.state.data.length === 0) {
+
       return (
-        <View
-          style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor:'#f9c1b1' }}
-        >
-          <Text style={{fontWeight:'bold', fontSize:18}}>Tasks assigned by you will appear here!</Text>
-        </View>
-      );
-    } else {
-      return (
-        <View style={{ flex: 1, backgroundColor: "#f9c1b1" }}>
+        <View style={{ flex: 1, backgroundColor: "#eec0c6" }}>
           <View
             style={{
-              backgroundColor: "#E30149",
+              backgroundColor: "#861657",
               flexDirection: "row",
             }}
           >
@@ -105,8 +97,8 @@ export default class Assign extends React.Component {
               </Text>
             </View>
           </View>
-          <ScrollView>
-            {this.state.data.map((x) => {
+          <ScrollView contentContainerStyle={{flex:1}}>
+            {this.state.data.length!=0?(this.state.data.map((x,index) => {
               var color = "";
               if (x.priority <= 3) {
                 color = "green";
@@ -118,7 +110,7 @@ export default class Assign extends React.Component {
 
               var bg = "";
               var text = "";
-
+ 
               if (x.status === "Pending") {
                 bg = "red";
                 text = "orange";
@@ -129,6 +121,7 @@ export default class Assign extends React.Component {
               }
               return (
                 <View
+                key ={index}
                   style={{
                     width: "90%",
                     borderWidth: 1,
@@ -193,12 +186,12 @@ export default class Assign extends React.Component {
                   </View>
                 </View>
               );
-            })}
+            })): (<View style={{justifyContent:'center', alignItems:'center', flex:1}}><Text style={{fontWeight:'bold', fontSize:18}}>Tasks assigned by you will appear here</Text></View>)}
           </ScrollView>
 
           <TouchableOpacity
             style={{
-              backgroundColor: "#ff0000",
+              backgroundColor: "#861657",
               width: "60%",
               height: 30,
               alignSelf: "center",
@@ -425,5 +418,5 @@ export default class Assign extends React.Component {
         </View>
       );
     }
-  }
+  
 }

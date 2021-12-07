@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "challenge-up",
-    "slug": "snack-e91443c4-a163-4aeb-a35d-49879bf0719e",
+    "name": "Challenge-Up",
+    "slug": "Challenge-Up",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,9 +17,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier":"com.Saache.ChallengeUp"
     },
     "android": {
+      "package":"com.Saache.ChallengeUp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
